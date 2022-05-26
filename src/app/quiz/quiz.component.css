@@ -1,0 +1,12 @@
+.radio-button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-button-option {
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+.card-container {
+  margin-bottom: 0.7rem;
+}

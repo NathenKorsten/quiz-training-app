@@ -1,0 +1,17 @@
+<mat-card *ngFor="let quiz of quizList" class="card-container">
+  <mat-card-subtitle id="radio-group-label">
+    Question {{ quizList.indexOf(quiz) + 1 }}
+  </mat-card-subtitle>
+  <mat-card-title> {{ quiz.question }} </mat-card-title>
+  <mat-card-content>
+    <mat-radio-group class="radio-button-group">
+      <mat-radio-button
+        class="radio-button-option"
+        *ngFor="let answers of quiz['answers']"
+        [value]="answers"
+      >
+        {{ answers }}
+      </mat-radio-button>
+    </mat-radio-group>
+  </mat-card-content>
+</mat-card>

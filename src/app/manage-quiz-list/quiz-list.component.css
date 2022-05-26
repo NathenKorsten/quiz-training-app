@@ -1,0 +1,16 @@
+.form-container {
+  flex: 1;
+  align-self: flex-start;
+  margin: 0 0 0 2.5rem;
+}
+
+.manage-quiz-container {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.quiz-list-container {
+  flex: 1;
+}

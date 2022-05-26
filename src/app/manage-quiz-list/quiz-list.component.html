@@ -1,0 +1,85 @@
+<div class="manage-quiz-container">
+  <div class="form-container">
+    <h1>Add New Quiz</h1>
+    <p>
+      <mat-form-field [formGroup]="quizForm">
+        <input
+          matInput
+          type="text"
+          placeholder="Enter Question "
+          formControlName="question"
+          [(ngModel)]="question"
+        />
+      </mat-form-field>
+    </p>
+
+    <p>
+      <mat-form-field [formGroup]="quizForm">
+        <mat-label> Answer</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Enter Answer 1"
+          formControlName="answerOne"
+          [(ngModel)]="answers[0]"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field [formGroup]="quizForm">
+        <mat-label> Answer</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Enter Answer 2"
+          formControlName="answerTwo"
+          [(ngModel)]="answers[1]"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field [formGroup]="quizForm">
+        <mat-label> Answer</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Enter Answer 3"
+          formControlName="answerThree"
+          [(ngModel)]="answers[2]"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field [formGroup]="quizForm">
+        <mat-label> Answer</mat-label>
+        <input
+          matInput
+          type="text"
+          placeholder="Enter Answer 4"
+          formControlName="answerFour"
+          [(ngModel)]="answers[3]"
+        />
+      </mat-form-field>
+    </p>
+    <p>
+      <mat-form-field [formGroup]="quizForm">
+        <mat-label> Correct Answer Number (number)</mat-label>
+        <input
+          matInput
+          type="number"
+          placeholder="Enter Correct Answer"
+          formControlName="correctAnswer"
+          [(ngModel)]="correctAnswer"
+        />
+      </mat-form-field>
+    </p>
+
+    <p>
+      <button type="submit" (click)="addQuiz()">Add Quiz</button>
+    </p>
+  </div>
+  <div class="quiz-list-container">
+    <h1>Quiz List</h1>
+    <app-list-quiz></app-list-quiz>
+  </div>
+</div>
