@@ -10,3 +10,14 @@
 .card-container {
   margin-bottom: 0.7rem;
 }
+
+.button-container {
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+
+.btn-submit {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}

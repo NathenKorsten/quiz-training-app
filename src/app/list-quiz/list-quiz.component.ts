@@ -10,7 +10,10 @@ export class ListQuizComponent implements OnInit {
 
   recieveQuiz = ($event: any[]) => {
     this.quizQuestion = $event;
+    console.log(this.quizQuestion);
   };
   constructor() {}
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.recieveQuiz);
+  }
 }

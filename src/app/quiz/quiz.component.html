@@ -9,9 +9,13 @@
         class="radio-button-option"
         *ngFor="let answers of quiz['answers']"
         [value]="answers"
+        (click)="handleAnswers($event)"
       >
         {{ answers }}
       </mat-radio-button>
     </mat-radio-group>
   </mat-card-content>
 </mat-card>
+<div class="button-container">
+  <button mat-raised-button color="primary" class="btn-submit">Submit</button>
+</div>

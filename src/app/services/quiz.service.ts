@@ -58,5 +58,7 @@ export class QuizService {
     const index = this.quizList.findIndex((quiz) => quiz.id == id);
     this.quizList.splice(index, 1);
   };
+
+  editQuiz = () => {};
   constructor() {}
 }

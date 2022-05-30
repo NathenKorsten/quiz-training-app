@@ -8,6 +8,9 @@ import { QuizService } from '../services/quiz.service';
 })
 export class QuizComponent implements OnInit {
   quizList: any[];
+  score: number = 0;
+  correctAnswer: number = 0;
+  answers: any[] = [];
   private questions: any[] = [];
   constructor(private QuizList: QuizService) {
     this.quizList = this.QuizList.getQuizList();
@@ -19,6 +22,26 @@ export class QuizComponent implements OnInit {
     this.questions = this.quizList;
     this.quizEvent.emit(this.questions);
   };
+
+  handleAnswers = (event: Event) => {
+    this.answers.push(event.target);
+    console.log(<HTMLInputElement>event.target);
+  };
+  // handleSubmit(event: Event) {
+  //   // window.alert('submit button clicked');
+  //   this.answers.forEach((answer) => {
+  //     console.log(answer.innerText);
+  //   });
+
+  //   this.quizList.forEach((quizAnswer) => {
+  //     this.answers.forEach((answer) => {
+  //       this.correctAnswer = quizAnswer.correctAnswer;
+  //       if (answer == quizAnswer.answers[this.correctAnswer]) this.score++;
+  //       console.log(quizAnswer.answers[this.correctAnswer]);
+  //     });
+  //   });
+  //   console.log(this.score);
+  // }
 
   ngOnInit(): void {
     this.sendQuiz();
